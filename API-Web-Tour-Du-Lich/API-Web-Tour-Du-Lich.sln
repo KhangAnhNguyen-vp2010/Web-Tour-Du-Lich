@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.36105.23 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API-Web-Tour-Du-Lich", "API-Web-Tour-Du-Lich.csproj", "{1AFA513D-2687-41DE-A7BF-9BC7C4BC6B4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AFA513D-2687-41DE-A7BF-9BC7C4BC6B4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AFA513D-2687-41DE-A7BF-9BC7C4BC6B4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AFA513D-2687-41DE-A7BF-9BC7C4BC6B4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AFA513D-2687-41DE-A7BF-9BC7C4BC6B4E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA2B93C2-61BB-4354-B5A5-2F6340608BDD}
+	EndGlobalSection
+EndGlobal

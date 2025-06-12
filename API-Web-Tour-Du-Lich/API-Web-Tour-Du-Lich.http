@@ -1,0 +1,6 @@
+@API_Web_Tour_Du_Lich_HostAddress = http://localhost:5070
+
+GET {{API_Web_Tour_Du_Lich_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
