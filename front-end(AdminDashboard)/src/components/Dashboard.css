@@ -1,0 +1,575 @@
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f6fa;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 280px;
+  background: #2c3e50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+.sidebar-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 1rem 0;
+}
+
+.nav-item {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  color: #ecf0f1;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item.active {
+  background: #3498db;
+  color: white;
+}
+
+.sidebar-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  margin-left: 280px;
+  padding: 2rem;
+}
+
+.content-section {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+.add-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  background: #2980b9;
+}
+
+/* Search Bar */
+.search-bar {
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #2c3e50;
+  background-color: white;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.search-bar input::placeholder {
+  color: #95a5a6;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #7f8c8d;
+}
+
+/* Error Message */
+.error-message {
+  background: #fde2e2;
+  color: #e74c3c;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.error-message i {
+  font-size: 1rem;
+}
+
+/* Table Styles */
+.tours-table {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  color: #2c3e50;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Set specific widths for columns */
+/* Tour Management */
+.tours-table table th:nth-child(1),
+.tours-table table td:nth-child(1) {
+  width: 15%;
+} /* Mã Tour */
+.tours-table table th:nth-child(2),
+.tours-table table td:nth-child(2) {
+  width: 25%;
+} /* Tên Tour */
+.tours-table table th:nth-child(3),
+.tours-table table td:nth-child(3) {
+  width: 15%;
+} /* Số Lượng */
+.tours-table table th:nth-child(4),
+.tours-table table td:nth-child(4) {
+  width: 15%;
+} /* Giá Tour */
+.tours-table table th:nth-child(5),
+.tours-table table td:nth-child(5) {
+  width: 15%;
+} /* Hình Ảnh */
+.tours-table table th:nth-child(6),
+.tours-table table td:nth-child(6) {
+  width: 15%;
+} /* Thao tác */
+
+/* Location Management */
+.tours-table table th:nth-child(1),
+.tours-table table td:nth-child(1) {
+  width: 15%;
+} /* Mã Địa Điểm */
+.tours-table table th:nth-child(2),
+.tours-table table td:nth-child(2) {
+  width: 15%;
+} /* Mã Tour */
+.tours-table table th:nth-child(3),
+.tours-table table td:nth-child(3) {
+  width: 25%;
+} /* Tên Địa Điểm */
+.tours-table table th:nth-child(4),
+.tours-table table td:nth-child(4) {
+  width: 25%;
+} /* Địa Chỉ */
+.tours-table table th:nth-child(5),
+.tours-table table td:nth-child(5) {
+  width: 20%;
+} /* Thao tác */
+
+/* Schedule Management */
+.tours-table table th:nth-child(1),
+.tours-table table td:nth-child(1) {
+  width: 15%;
+} /* Mã Lịch Trình */
+.tours-table table th:nth-child(2),
+.tours-table table td:nth-child(2) {
+  width: 15%;
+} /* Mã Tour */
+.tours-table table th:nth-child(3),
+.tours-table table td:nth-child(3) {
+  width: 15%;
+} /* Ngày Bắt Đầu */
+.tours-table table th:nth-child(4),
+.tours-table table td:nth-child(4) {
+  width: 15%;
+} /* Ngày Kết Thúc */
+.tours-table table th:nth-child(5),
+.tours-table table td:nth-child(5) {
+  width: 20%;
+} /* Mô Tả */
+.tours-table table th:nth-child(6),
+.tours-table table td:nth-child(6) {
+  width: 20%;
+} /* Thao tác */
+
+/* Action buttons container */
+td:last-child {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.action-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.action-btn.edit {
+  background: #3498db;
+  color: white;
+}
+
+.action-btn.edit:hover {
+  background: #2980b9;
+}
+
+.action-btn.delete {
+  background: #e74c3c;
+  color: white;
+}
+
+.action-btn.delete:hover {
+  background: #c0392b;
+}
+
+th {
+  background: #f8f9fa;
+  color: #2c3e50;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  padding-right: 2rem;
+}
+
+th:hover {
+  background: #e9ecef;
+}
+
+th.sort-asc::after,
+th.sort-desc::after {
+  content: "";
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+th.sort-asc::after {
+  border-bottom: 5px solid #2c3e50;
+}
+
+th.sort-desc::after {
+  border-top: 5px solid #2c3e50;
+}
+
+.tour-image {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #2c3e50;
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #f8f9fa;
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination .page-numbers {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.pagination .page-number {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #2c3e50;
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination .page-number:hover {
+  background: #f8f9fa;
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.pagination .page-number.active {
+  background: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.pagination .page-number.active:hover {
+  background: #2980b9;
+  color: white;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #2c3e50;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: #e74c3c;
+}
+
+.modal-body {
+  margin-bottom: 1rem;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #eee;
+}
+
+.modal-footer button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.modal-footer button:first-child {
+  background: #e74c3c;
+  color: white;
+}
+
+.modal-footer button:last-child {
+  background: #3498db;
+  color: white;
+}
+
+.modal-footer button:hover {
+  opacity: 0.9;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #2c3e50;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Logout Button */
+.logout-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .tours-table {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 800px;
+  }
+
+  .modal-content {
+    width: 95%;
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
