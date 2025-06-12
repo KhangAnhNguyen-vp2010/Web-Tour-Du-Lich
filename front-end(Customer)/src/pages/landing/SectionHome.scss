@@ -1,0 +1,38 @@
+.section-home {
+  .btn-primary {
+    font-weight: 600;
+    text-decoration: none;
+    /* Tailwind classes sẽ để trong JSX */
+  }
+  .image-placeholder {
+    border: 2px dashed #2563eb;
+  }
+}
+
+.home-section {
+  padding: 5rem 0;
+  background-color: #f8f9fa;
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+
+    img {
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .btn-primary {
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+}

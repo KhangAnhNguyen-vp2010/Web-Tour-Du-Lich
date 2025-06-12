@@ -1,0 +1,13 @@
+.header {
+  .logo {
+    letter-spacing: 2px;
+  }
+  .nav-link {
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s;
+    &:hover {
+      color: #2563eb;
+    }
+  }
+}

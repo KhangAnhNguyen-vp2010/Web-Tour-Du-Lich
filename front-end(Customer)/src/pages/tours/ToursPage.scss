@@ -1,0 +1,104 @@
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.hover-lift {
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .card-img-top {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover .card-img-top {
+    transform: scale(1.05);
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+  }
+
+  .card-text {
+    margin-bottom: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    margin-top: 0.75rem;
+    padding: 0.5rem;
+    font-weight: 500;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+}
+
+.locations-sidebar {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .location-card {
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding: 1rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: #f8f9fa;
+      transform: translateX(5px);
+    }
+
+    &.active {
+      background-color: #e9ecef;
+      border-left: 4px solid #0d6efd;
+    }
+
+    h5 {
+      color: #333;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.85rem;
+      margin-bottom: 0.25rem;
+    }
+
+    small {
+      font-size: 0.8rem;
+      color: #6c757d;
+    }
+  }
+}

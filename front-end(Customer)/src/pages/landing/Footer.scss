@@ -1,0 +1,153 @@
+.footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 60px 0 0;
+  margin-top: 60px;
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+  }
+
+  .footer-section {
+    h4 {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background-color: #007bff;
+      }
+    }
+
+    p {
+      color: #b3b3b3;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+  }
+
+  .social-links {
+    display: flex;
+    gap: 15px;
+
+    .social-link {
+      color: #fff;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #007bff;
+      }
+    }
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 10px;
+
+      a {
+        color: #b3b3b3;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #007bff;
+        }
+      }
+    }
+  }
+
+  .contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      color: #b3b3b3;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      i {
+        color: #007bff;
+        width: 20px;
+      }
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+
+    .footer-bottom-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      p {
+        color: #b3b3b3;
+        margin: 0;
+      }
+
+      .footer-bottom-links {
+        display: flex;
+        gap: 20px;
+
+        a {
+          color: #b3b3b3;
+          text-decoration: none;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #007bff;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .footer {
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .footer-bottom {
+      .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+
+        .footer-bottom-links {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

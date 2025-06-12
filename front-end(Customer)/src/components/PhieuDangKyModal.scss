@@ -1,0 +1,105 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalFadeIn 0.3s ease-out;
+  margin-top: 60px;
+
+  .modal-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .modal-title {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+  }
+
+  .modal-body {
+    padding: 1.5rem;
+
+    .phieu-detail {
+      .section-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+
+      .info-section {
+        .info-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 1rem;
+
+          .info-item {
+            label {
+              display: block;
+              font-size: 0.875rem;
+              color: #6c757d;
+              margin-bottom: 0.25rem;
+            }
+
+            span {
+              font-weight: 500;
+              color: #333;
+            }
+          }
+        }
+      }
+
+      .tours-section {
+        .table {
+          th {
+            font-weight: 600;
+            color: #555;
+          }
+
+          td {
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #dee2e6;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

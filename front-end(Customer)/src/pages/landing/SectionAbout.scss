@@ -1,0 +1,33 @@
+.section-about {
+  .image-placeholder {
+    border: 2px dashed #60a5fa;
+  }
+}
+
+.about-section {
+  background-color: #fff;
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+
+    img {
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .feature-card {
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1) !important;
+    }
+  }
+}
