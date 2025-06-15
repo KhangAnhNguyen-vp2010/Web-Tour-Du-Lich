@@ -3,6 +3,8 @@ Quản lý tour du lịch (React + Net 8.0)
 
 Hình ảnh demo:
 
+-Customer:
+
 <img width="941" alt="image" src="https://github.com/user-attachments/assets/bdf2beff-7e8c-4ee4-93be-ea661cdc1fdb" />
 
 <img width="941" alt="image" src="https://github.com/user-attachments/assets/f73a0173-bfbb-4c59-86b2-9f55ecb4033f" />
@@ -36,6 +38,19 @@ Hình ảnh demo:
 <img width="941" alt="image" src="https://github.com/user-attachments/assets/db21fe10-e7c8-4afd-952a-ef612dd4e8ca" />
 
 <img width="947" alt="image" src="https://github.com/user-attachments/assets/69dba082-db01-4f7c-ba8e-bcf289144311" />
+
+- Admin Dashboard:
+
+<img width="955" alt="image" src="https://github.com/user-attachments/assets/a744fdc3-74af-4755-aa86-591a96cf9829" />
+
+<img width="946" alt="image" src="https://github.com/user-attachments/assets/91fc615c-7e6b-4284-8d63-c4435b97d00e" />
+
+<img width="943" alt="image" src="https://github.com/user-attachments/assets/7168dd28-239e-45b8-a215-09d7bbcc2f9d" />
+
+<img width="955" alt="image" src="https://github.com/user-attachments/assets/7353f3ff-9ff5-45d2-bb9b-39caef380ba4" />
+
+
+
 
 
 
